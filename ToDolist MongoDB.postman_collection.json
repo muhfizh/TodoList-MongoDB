@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "cc82365b-c882-4c44-88ef-081b0a3878a6",
+		"name": "ToDolist MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37958870",
+		"_collection_link": "https://sidomuncul.postman.co/workspace/sidomuncul-Workspace~384dc8cf-a066-4b09-84a8-1dcf9fdaa663/collection/37958870-cc82365b-c882-4c44-88ef-081b0a3878a6?action=share&source=collection_link&creator=37958870"
+	},
+	"item": [
+		{
+			"name": "Get All Todo List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2424/ToDolist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"ToDolist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post New Todo List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TodoList\": \"Buat Project Baru 3\",\r\n    \"Description\": \"Membuat Project Task To Do Baru\",\r\n    \"Status\": \"Open\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2424/ToDolist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"ToDolist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Todo List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2424/ToDolist/Buat Project Baru 1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"ToDolist",
+						"Buat Project Baru 1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Todo List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Description\": \"Membuat Project Task To Do Baru 1\",\r\n    \"Status\": \"On Progress\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2424/ToDolist/Buat Project Baru 1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"ToDolist",
+						"Buat Project Baru 1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2424/ToDolist/Buat Project Baru",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"ToDolist",
+						"Buat Project Baru"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
