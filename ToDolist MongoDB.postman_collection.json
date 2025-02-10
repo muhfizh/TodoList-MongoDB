@@ -11,7 +11,13 @@
 			"name": "Get All Todo List",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIEZlYiAxMCAyMDI1IDEzOjU4OjUzIEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsImlhdCI6MTczOTE3MDczM30.6CS8uzcB8WAiHLdPRnks87ti89fX_M8bwj6VuKmJN58",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:2424/ToDolist",
 					"protocol": "http",
@@ -29,11 +35,20 @@
 		{
 			"name": "Post New Todo List",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIEZlYiAxMCAyMDI1IDEzOjU4OjUzIEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsImlhdCI6MTczOTE3MDczM30.6CS8uzcB8WAiHLdPRnks87ti89fX_M8bwj6VuKmJN58",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"TodoList\": \"Buat Project Baru 3\",\r\n    \"Description\": \"Membuat Project Task To Do Baru\",\r\n    \"Status\": \"Open\"\r\n}",
+					"raw": "{\r\n    \"TodoList\": \"Buat Project Baru 4\",\r\n    \"Description\": \"Membuat Project Task To Do Baru\",\r\n    \"Status\": \"Open\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -58,9 +73,15 @@
 			"name": "Get Todo List",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIEZlYiAxMCAyMDI1IDE0OjA0OjI5IEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsImlhdCI6MTczOTE3MTA2OX0.KjPidzKBWFzWPjnV-6MqhnAyRfQaODyhbPHSu5pdsew",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "http://localhost:2424/ToDolist/Buat Project Baru 1",
+					"raw": "http://localhost:2424/ToDolist/Buat Project Baru",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -68,7 +89,7 @@
 					"port": "2424",
 					"path": [
 						"ToDolist",
-						"Buat Project Baru 1"
+						"Buat Project Baru"
 					]
 				}
 			},
@@ -81,16 +102,51 @@
 					"type": "noauth"
 				},
 				"method": "PATCH",
-				"header": [],
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIEZlYiAxMCAyMDI1IDEzOjU4OjUzIEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsImlhdCI6MTczOTE3MDczM30.6CS8uzcB8WAiHLdPRnks87ti89fX_M8bwj6VuKmJN58",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Description\": \"Membuat Project Task To Do Baru 1\",\r\n    \"Status\": \"On Progress\"\r\n}",
+					"raw": "{\r\n    \"Description\": \"Membuat Project Task To Do Baru 4\",\r\n    \"Status\": \"On Progress\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
+				"url": {
+					"raw": "http://localhost:2424/ToDolist/Buat Project Baru 4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"ToDolist",
+						"Buat Project Baru 4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIEZlYiAxMCAyMDI1IDEzOjU4OjUzIEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsImlhdCI6MTczOTE3MDczM30.6CS8uzcB8WAiHLdPRnks87ti89fX_M8bwj6VuKmJN58",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:2424/ToDolist/Buat Project Baru 1",
 					"protocol": "http",
@@ -107,23 +163,90 @@
 			"response": []
 		},
 		{
-			"name": "Delete Todo List",
+			"name": "Login",
 			"request": {
 				"auth": {
 					"type": "noauth"
 				},
-				"method": "DELETE",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Username\": \"admin\",\r\n    \"Password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:2424/ToDolist/Buat Project Baru",
+					"raw": "http://localhost:2424/login",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "2424",
 					"path": [
-						"ToDolist",
-						"Buat Project Baru"
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Username\": \"admin\",\r\n    \"Password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2424/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIEZlYiAxMCAyMDI1IDEzOjU4OjUzIEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsImlhdCI6MTczOTE3MDczM30.6CS8uzcB8WAiHLdPRnks87ti89fX_M8bwj6VuKmJN58",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2424/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"user"
 					]
 				}
 			},
